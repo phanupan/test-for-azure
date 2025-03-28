@@ -81,19 +81,27 @@ WSGI_APPLICATION = 'azure_project.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'azure-sql-db',
-        'USER': 'panuphan-admin',
-        'PASSWORD': 'White_rider_00',
-        'HOST': 'panuphan-sever.database.windows.net',
-        'PORT': '1433',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 18 for SQL Server',
-        },
-    },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mssql',
+#         'NAME': 'azure-sql-db',
+#         'USER': 'panuphan-admin',
+#         'PASSWORD': 'White_rider_00',
+#         'HOST': 'panuphan-sever.database.windows.net',
+#         'PORT': '1433',
+#         'OPTIONS': {
+#             'driver': 'ODBC Driver 18 for SQL Server',
+#         },
+#     },
+# }
 
 
 # Password validation
